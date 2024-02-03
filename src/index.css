@@ -95,3 +95,29 @@ code {
   min-height: 100%;
   position: relative;
 }
+.full-screen {
+  min-height: 100vh;
+  background: url("./asserts/gym.jpg") center;
+  /* background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027); */
+  display: flex;
+  padding: 10px 0px;
+}
+.full-screen__body {
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+}
+.full-screen__title {
+  color: white;
+  font-size: 55px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
