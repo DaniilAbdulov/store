@@ -1,18 +1,23 @@
-import { Card } from "antd";
+import { Button, Card, Flex } from "antd";
+import { PhotoLoadingHandler } from "./UI/PhotoLoadingHandler";
 const { Meta } = Card;
-export const MyCard = () => (
-  <Card
-    hoverable
-    style={{
-      width: 240,
-    }}
-    cover={
-      <img
-        alt="example"
-        src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-      />
-    }
-  >
-    <Meta title="Europe Street beat" description="www.instagram.com" />
-  </Card>
-);
+export const MyCard = ({ data }) => {
+  const { title, price, image } = data;
+
+  return (
+    <Card
+      hoverable
+      style={{ width: 240 }}
+      cover={<PhotoLoadingHandler img={image} />}
+    >
+      <Flex vertical align="center">
+        <Meta
+          title={title}
+          description={price}
+          style={{ marginBottom: "10px" }}
+        />
+        <Button type="primary">В корзину</Button>
+      </Flex>
+    </Card>
+  );
+};
